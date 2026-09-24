@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Moon Decor - Celestial & Luxury Home Decor</title>
+    <style>
+        :root {
+            --primary: #2c1654;
+            --accent: #d4af37;
+            --bg-color: #fcfbfa;
+            --text-main: #333333;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+        /* Top Announcement */
+        .announcement-bar {
+            background: linear-gradient(135deg, #2c1654, #4a2882);
+            color: var(--accent);
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: var(--accent);
+        }
+        .whatsapp-top {
+            background: #25D366;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+        .whatsapp-top:hover {
+            background: #20ba5a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 22, 84, 0.8), rgba(44, 22, 84, 0.8)), url('https://i.ibb.co/PkqBKQR/915f5-G4-BQ2-L-AC-UF894-1000-QL80.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .hero h1 span {
+            color: var(--accent);
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            color: #ddd;
+        }
+        .hero-btn {
+            background-color: var(--accent);
+            color: #2c1654;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .hero-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 30px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .badge {
+            background: var(--accent);
+            color: #2c1654;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .img-box {
+            height: 200px;
+            background: #f4f4f4;
+            border-radius: 6px;
+            margin: 15px 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        .price-box {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .current-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #b12704;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 14px;
+        }
+        .order-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+        .order-btn:hover {
+            background-color: #3b1d70;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        footer p {
+            margin: 5px 0;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* Responsive Design tweaks */
+        @media(max-width: 768px) {
+            header { padding: 15px 20px; }
+            .hero h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        ✨ Celestial Sale Live! Get Upto 70% OFF + Free Shipping Across India 🌙
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">SUN MOON <span>DECOR</span></div>
+        <a href="https://wa.me/918955550232?text=Hello%20Sun%20Moon%20Decor,%20I%20need%20help%20with%20an%20order." target="_blank" class="whatsapp-top">
+            💬 WhatsApp Support
+        </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Transform Your Space with <span>Celestial Elegance</span></h1>
+        <p>Discover hand-crafted luxury showpieces, divine idols, and magical home decor items designed to illuminate your living spaces.</p>
+        <a href="#products" class="hero-btn">Explore Collection</a>
+    </section>
+
+    <!-- Products Showcase -->
+    <section class="products-section" id="products">
+        <h2 class="section-title">Exclusive Decor Collection</h2>
+        <p class="section-subtitle">Bring positive energy and unmatched aesthetics into your home.</p>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <span class="badge">Bestseller</span>
+                <div class="img-box">
+                    <img src="https://i.ibb.co/HTZQY6hH/Resin-Radha-Krishna-Murti-with-Peacock-1.png" alt="Celestial Radha Krishna">
+                </div>
+                <div class="product-title">Celestial Radha Krishna Murti</div>
+                <div class="price-box">
+                    <span class="current-price">₹2,499</span>
+                    <span class="old-price">₹10,999</span>
+                </div>
+                <button class="order-btn" onclick="window.open('https://wa.me/918955550232?text=I%20want%20to%20order%20Celestial%20Radha%20Krishna%20Murti%20for%20Rs.2499', '_blank')">Order on WhatsApp</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <span class="badge">Trending</span>
+                <div class="img-box">
+                    <img src="https://i.ibb.co/SHvv0rq/71-Zag-KL7eo-L.jpg" alt="Sun & Moon Luxury Figurine">
+                </div>
+                <div class="product-title">Sun & Moon Cosmic Figurine</div>
+                <div class="price-box">
+                    <span class="current-price">₹1,999</span>
+                    <span class="old-price">₹9,199</span>
+                </div>
+                <button class="order-btn" onclick="window.open('https://wa.me/918955550232?text=I%20want%20to%20order%20Sun%20and%20Moon%20Cosmic%20Figurine%20for%20Rs.1999', '_blank')">Order on WhatsApp</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <span class="badge">Limited Stock</span>
+                <div class="img-box">
+                    <img src="https://i.ibb.co/Q3DJxvcT/A.jpg" alt="Aesthetic Art Showpiece">
+                </div>
+                <div class="product-title">Ethereal Art Showpiece</div>
+                <div class="price-box">
+                    <span class="current-price">₹1,499</span>
+                    <span class="old-price">₹6,999</span>
+                </div>
+                <button class="order-btn" onclick="window.open('https://wa.me/918955550232?text=I%20want%20to%20order%20Ethereal%20Art%20Showpiece%20for%20Rs.1499', '_blank')">Order on WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sun Moon Decor. All Rights Reserved.</p>
+        <p>Crafting magical spaces for your homes.</p>
+    </footer>
+
+</body>
+</html>
